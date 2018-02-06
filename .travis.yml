@@ -14,6 +14,8 @@ script:
   - make build
 
 before_deploy:
-  - make build
+
+after_success:
+  - make generate-md
 
 deploy:
